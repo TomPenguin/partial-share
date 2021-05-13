@@ -1,17 +1,13 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <frame></frame>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Frame from "@/components/Frame.vue";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: { Frame },
+};
 </script>
 
 <style>
@@ -22,5 +18,19 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+html {
+  -webkit-app-region: drag;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0);
 }
 </style>
